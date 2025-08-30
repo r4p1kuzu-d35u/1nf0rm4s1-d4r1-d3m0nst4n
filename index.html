@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information from demonstran and other community!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'glow': 'glow 2s ease-in-out infinite alternate'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px #ef4444, 0 0 10px #ef4444, 0 0 15px #ef4444' },
+                            '100%': { boxShadow: '0 0 10px #dc2626, 0 0 20px #dc2626, 0 0 30px #dc2626' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .media-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .media-hover:hover {
+            transform: scale(1.02);
+        }
+        .title-glow {
+            text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #ef4444, #dc2626);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, #dc2626, #b91c1c);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-red-950 min-h-screen text-white custom-scrollbar">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-black via-red-950 to-black border-b border-red-800 shadow-2xl">
+    <div class="container mx-auto px-6 py-8">
+        <h1 class="text-4xl font-bold text-center bg-gradient-to-r from-red-500 via-red-400 to-red-600 bg-clip-text text-transparent title-glow animate-fade-in">
+            WEB YANG MENAMPILKAN INFORMASI DAN MEDIA DARI DEMONSTRAN TERMASUK YANG SENSITIF
+        </h1>
+        <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-red-400 mx-auto mt-4 rounded-full animate-glow"></div>
+    </div>
+</div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-12">
+        <div class="grid gap-12 max-w-5xl mx-auto">
+          
+                <!-- Text1 1 -->
+                <div class="bg-gradient-to-br from-gray-900 to-black border border-red-800 rounded-xl p-6 mb-8 shadow-2xl media-hover hover:border-red-600 hover:shadow-red-900/50">
+                    <h3 class="text-2xl font-semibold mb-3 text-red-300">SKENARIO BURUK YANG MUNGKIN TERJADI</h3>
+                    <p class="text-gray-300 mb-4 leading-relaxed">Seluruh Indonesia total lockdown; red zone
+
+Prabowo netapin martial law (darurat sipil) kyk Ferdinand Marcos
+
+Pemerintahan diambil alih junta militer
+
+Cuma TNI/Parcok yg boleh berkeliaran di jlnan
+
+Masyarakat yg keluar bakal ditembak</p>
+                </div>
+          
+                <!-- Image 1 -->
+                <div class="bg-gradient-to-br from-gray-900 to-black border border-red-800 rounded-xl p-6 mb-8 shadow-2xl media-hover hover:border-red-600 hover:shadow-red-900/50">
+                    <h3 class="text-2xl font-semibold mb-3 text-red-300">Image1</h3>
+                    <p class="text-gray-300 mb-4 leading-relaxed">description</p>
+                    <div class="overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://qu.ax/sttPo.png" 
+                             alt="Image 1" 
+                             class="w-full h-auto max-w-full rounded-lg transition-transform duration-300 hover:scale-105"
+                             loading="lazy">
+                    </div>
+                </div>
+                
+                <!-- Video 1 -->
+                <div class="bg-gradient-to-br from-gray-900 to-black border border-red-800 rounded-xl p-6 mb-8 shadow-2xl media-hover hover:border-red-600 hover:shadow-red-900/50">
+                    <h3 class="text-2xl font-semibold mb-3 text-red-300">Video1</h3>
+                    <p class="text-gray-300 mb-4 leading-relaxed">description</p>
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <video class="w-full max-w-full h-auto rounded-lg bg-black" 
+                               controls 
+                               preload="metadata">
+                            <source src="https://qu.ax/hFOsQ.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung tag video.
+                        </video>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script>
+        // Add loading animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.2}s`;
+            });
+
+            // Add intersection observer for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('.media-hover').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
